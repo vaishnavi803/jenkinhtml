@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Background</title>
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <center>
+    <button onclick="changeBackground()">Change Background</button>
+  </center>
+
+  <script>
+    const colors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff', '#a0c4ff', '#bdb2ff', '#ffc6ff'];
+    let current = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundColor = colors[current];
+      current = (current + 1) % colors.length;
+    }
+  </script>
+
+</body>
+</html>
+
